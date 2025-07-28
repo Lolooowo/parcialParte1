@@ -4,7 +4,7 @@ class evaluacion:
         self.puntualidad = puntualidad
         self.equipo = equipo
     def promedio(self):
-        promedio = sum(self.productividad) / 3
+        promedio = (puntualidad+productividad+equipo) / 3
         return promedio
 
 def estado(promedio):
@@ -55,9 +55,12 @@ for i in range(numEmpleados):
             "Estado": estado
         },
         "informacion": {
-            "telefono": nuevoEmpleado.evaluacion.telefono,
-            "correo": nuevoEmpleado.evaluacion.correo,
+            "telefono": nuevoEmpleado.inforamcion.telefono,
+            "correo": nuevoEmpleado.inforamcion.correo,
         }
     }
+for i in range(10):
+    print("  ")
+print("HOlas")
 
 
