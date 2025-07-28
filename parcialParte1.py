@@ -63,6 +63,9 @@ for i in range(numEmpleados):
     }
 for i in range(10):
     print("\n")
+
+#Mostrar Informacin de todos los empleados
+
 for clave, valor in empleados.items():
     print(f"\t Empleado: {clave}")
     print(f"Nombre: {valor['nombre']}")
@@ -77,6 +80,8 @@ for clave, valor in empleados.items():
     print("\t Informacion.")
     print(f"Telefono: {valor['informacion']['telefono']}")
     print(f"Correo: {valor['informacion']['correo']}")
+
+#Buscar Un Empleado
 
 print("\n")
 buscar= int(input("Ingrese el codigo del empleado para buscarlo: "))
@@ -94,9 +99,14 @@ print(f"Estado: {empleado['evaluacion']['Estado']}")
 print("\t Informacion.")
 print(f"Telefono: {empleado['informacion']['telefono']}")
 print(f"Correo: {empleado['informacion']['correo']}")
+
+#Mostrar el total de "Satisfactorios en los empleados
+
 contSatisfactorio = 0
 for clave, valor in empleados.items():
-    if clave["evaluacion"]["Estado"] == "Satisfactorio":
+    if valor["evaluacion"]["Estado"] == "Satisfactorio":
         contSatisfactorio += 1
 print(f"Total de personas con una calificacion de (Satisfactorio): {contSatisfactorio}")
+
+#Quien tiene el promedio mayor
 
