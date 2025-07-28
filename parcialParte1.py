@@ -62,7 +62,7 @@ for i in range(numEmpleados):
         }
     }
 for i in range(10):
-    print("  ")
+    print("\n")
 for clave, valor in empleados.items():
     print(f"\t Empleado: {clave}")
     print(f"Nombre: {valor['nombre']}")
@@ -78,4 +78,19 @@ for clave, valor in empleados.items():
     print(f"Telefono: {valor['informacion']['telefono']}")
     print(f"Correo: {valor['informacion']['correo']}")
 
-
+print("\n")
+buscar= int(input("Ingrese el codigo del empleado para buscarlo: "))
+empleado = empleados[buscar]
+print(f"\t Empleado: {buscar}")
+print(f"Nombre: {empleado['nombre']}")
+print(f"Departamento: {empleado['departamento']}")
+print(f"Antiguedad: {empleado['antiguedad']}")
+print(f"\t Evaluacion. ")
+print(f"Trabajo en equipo: {empleado['evaluacion']['equipo']}")
+print(f"Productividad: {empleado['evaluacion']['productividad']}")
+print(f"Puntualidad: {empleado['evaluacion']['puntualidad']}")
+print(f"Promedio: {empleado['evaluacion']['promedio']}")
+print(f"Estado: {empleado['evaluacion']['Estado']}")
+print("\t Informacion.")
+print(f"Telefono: {empleado['informacion']['telefono']}")
+print(f"Correo: {empleado['informacion']['correo']}")
