@@ -94,3 +94,9 @@ print(f"Estado: {empleado['evaluacion']['Estado']}")
 print("\t Informacion.")
 print(f"Telefono: {empleado['informacion']['telefono']}")
 print(f"Correo: {empleado['informacion']['correo']}")
+contSatisfactorio = 0
+for clave, valor in empleados.items():
+    if clave["evaluacion"]["Estado"] == "Satisfactorio":
+        contSatisfactorio += 1
+print(f"Total de personas con una calificacion de (Satisfactorio): {contSatisfactorio}")
+
