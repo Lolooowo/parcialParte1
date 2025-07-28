@@ -4,6 +4,7 @@ class evaluacion:
         self.puntualidad = puntualidad
         self.equipo = equipo
     def promedio(self):
+        promedio = 0
         promedio = (puntualidad+productividad+equipo) / 3
         return promedio
 
@@ -28,6 +29,7 @@ empleados = {}
 numEmpleados = int(input("Cuantos empleados desea ingresar: "))
 for i in range(numEmpleados):
     codigoEmpleado = i+1
+    print(f"Empledo No. {codigoEmpleado}")
     nombre = input("Ingrese el nombre del empleado: ")
     departamento = input("Ingrese el departamento del empleado: ")
     antiguedad = input("Ingrese la antiguedad: ")
@@ -35,14 +37,14 @@ for i in range(numEmpleados):
     productividad = int(input("Ingrese el productividad del empleado: "))
     puntualidad = int(input("Ingrese la puntualidad del empleado: "))
     equipo = int(input("Ingrese el trabajo en equipo del empleado: "))
-    evaluacion = evaluacion(puntualidad, equipo, productividad)
+    NuevaEvaluacion = evaluacion(puntualidad, equipo, productividad)
     print("\t Ingrese el contacto del empleado:")
     telefono = input("Ingrese el numero del telefono del empleado: ")
     correo = input("Ingrese el correo del empleado: ")
     informacion = Informacion(telefono, correo)
-    nuevoEmpleado = Empleado(nombre, departamento, antiguedad, evaluacion, informacion)
+    nuevoEmpleado = Empleado(nombre, departamento, antiguedad, NuevaEvaluacion, informacion)
     promedio = nuevoEmpleado.evaluacion.promedio()
-    estado = estado(promedio)
+    NuevoEstado = estado(promedio)
     empleados[codigoEmpleado] = {
         "nombre": nuevoEmpleado.nombre,
         "departamento": nuevoEmpleado.departamento,
@@ -52,7 +54,7 @@ for i in range(numEmpleados):
             "productividad": nuevoEmpleado.evaluacion.productividad,
             "puntualidad": nuevoEmpleado.evaluacion.productividad,
             "promedio": nuevoEmpleado.evaluacion.promedio(),
-            "Estado": estado
+            "Estado": NuevoEstado
         },
         "informacion": {
             "telefono": nuevoEmpleado.inforamcion.telefono,
