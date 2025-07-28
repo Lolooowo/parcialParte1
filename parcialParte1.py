@@ -109,4 +109,12 @@ for clave, valor in empleados.items():
 print(f"Total de personas con una calificacion de (Satisfactorio): {contSatisfactorio}")
 
 #Quien tiene el promedio mayor
-
+mayor = 0
+personaConMayorPromedio = 0
+for clave, valor in empleados.items():
+    if valor["evaluacion"]["promedio"] > mayor:
+        mayor = valor["evaluacion"]["promedio"]
+        personaConMayorPromedio = clave
+empleadoPromedio = empleados[personaConMayorPromedio]
+print(f"La persona con el mayor promedio es: {empleadoPromedio["nombre"]}")
+print(f"Su promedio es de: {empleadoPromedio['evaluacion']['promedio']}")
