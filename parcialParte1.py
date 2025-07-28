@@ -27,7 +27,7 @@ class Informacion:
 empleados = {}
 numEmpleados = int(input("Cuantos empleados desea ingresar: "))
 for i in range(numEmpleados):
-    codigoEmpleado = i
+    codigoEmpleado = i+1
     nombre = input("Ingrese el nombre del empleado: ")
     departamento = input("Ingrese el departamento del empleado: ")
     antiguedad = input("Ingrese la antiguedad: ")
@@ -61,6 +61,19 @@ for i in range(numEmpleados):
     }
 for i in range(10):
     print("  ")
-print("HOlas")
+for clave, valor in empleados.items():
+    print(f"\t Empleado: {clave}")
+    print(f"Nombre: {valor['nombre']}")
+    print(f"Departamento: {valor['departamento']}")
+    print(f"Antiguedad: {valor['antiguedad']}")
+    print(f"\t Evaluacion. ")
+    print(f"Trabajo en equipo: {valor['evaluacion']['equipo']}")
+    print(f"Productividad: {valor['evaluacion']['productividad']}")
+    print(f"Puntualidad: {valor['evaluacion']['puntualidad']}")
+    print(f"Promedio: {valor['evaluacion']['promedio']}")
+    print(f"Estado: {valor['evaluacion']['Estado']}")
+    print("\t Informacion.")
+    print(f"Telefono: {valor['informacion']['telefono']}")
+    print(f"Correo: {valor['informacion']['correo']}")
 
 
